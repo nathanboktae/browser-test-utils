@@ -57,6 +57,13 @@ HTMLElement.prototype.waitUntilExists = function(selector) {
   return waitUntil(() => this.querySelector(selector), `"${selector}" did not appear`)
 }
 
+HTMLElement.prototype.waitUntilAllExist = function(selector) {
+  return waitUntil(() => {
+    var items = this.querySelectorAll(selector)
+    return items.length ? items : null
+  }, `"${selector}" did not appear`)
+}
+
 HTMLElement.prototype.waitUntilChildContainsText = function(selector, text) {
   return waitUntil(() => {
     var child = this.querySelector(selector)

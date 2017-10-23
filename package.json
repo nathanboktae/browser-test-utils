@@ -1,6 +1,6 @@
 {
   "name": "nathanboktae-browser-test-utils",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "My favorite browser and DOM test utils.",
   "main": "browser-test-utils.js",
   "scripts": {
